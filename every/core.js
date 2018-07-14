@@ -2,14 +2,18 @@
 // are even numbers.
 
 function allEven (input) {
-  return input;
+  return input.every(num => {
+    return !(num % 2);
+  });
 };
 
 // Check to see if all elements in an array
 // are of the same type.
 
 function allSameType (input) {
-  return input;
+  return input.every((item, index, array) => {
+    return (typeof item) === (typeof array[0])
+  });
 };
 
 // Check to see if every element in the matrix is
