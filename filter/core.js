@@ -1,9 +1,15 @@
 function onlyEven (array) {
   // your code here
+  return array.filter(even => {
+    return even % 2 === 0
+  })
 };
 
 function onlyOneWord (array) {
   // your code here
+  return array(word => {
+    return word.length
+  })
 };
 
 function positiveRowsOnly (array) {

@@ -11,8 +11,8 @@ function allEven (input) {
 // are of the same type.
 
 function allSameType (input) {
-  return input.every((item, index, array) => {
-    return (typeof item) === (typeof array[0])
+  return input.every((item, index) => {
+    return (typeof item) === (typeof index)
   });
 };
 
@@ -21,14 +21,27 @@ function allSameType (input) {
 // greater than 0.
 
 function positiveMatrix (input) {
-  return input;
+  return input.every(item => {
+      return Array.isArray(item) && item.every(num => {
+        return num > -
+      })
+  });
 };
+
+/* function positiveMatrix (input) {
+  return input.every((item, index,array) => {
+    ret (typeof item === 'array) && array[index] > 0
+});
+};
+*/
 
 // Check that all items in an array are strings
 // and that they all only contain the same vowels.
 
 function allSameVowels (input) {
-  return input;
+  return input.every(item => {
+    typeof item === string
+  });
 };
 
 module.exports = {
