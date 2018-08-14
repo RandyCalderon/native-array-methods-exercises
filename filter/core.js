@@ -7,8 +7,8 @@ function onlyEven (array) {
 
 function onlyOneWord (array) {
   // your code here
-  return array(word => {
-    return word.length
+  return array.filter(word => {
+    return word.split(' ').length <= 1;
   })
 };
 

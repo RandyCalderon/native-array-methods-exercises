@@ -15,7 +15,7 @@ function shiftRight (array) {
 function onlyVowels (array) {
  // your code here
  return array.map((elements,array,index) => {
-   return elements.replace(/[^aeiou]/ig,'')
+   return elements.replace(/[^aeiou]/i g,'')
  })
 };
 
